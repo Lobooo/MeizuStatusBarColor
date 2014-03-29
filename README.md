@@ -9,7 +9,7 @@ Usage
   1. In your `onCreate` method ,use StatusBarColorUtils.changeStatusBarColor()
         before setContentView()
         
-  2. <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+  2. uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"
     
   3. when android:windowIsTranslucent is true, which would lead to conflicts
 
