@@ -4,8 +4,8 @@ MeizuStatusBarColor
 Usage
 =====
 
-*Only for Meizu Flyme3.0.*
-
+*Change the StatusBar color to the same color of the ActionBar，just like ios7*
+*And Only supports Meizu Flyme3.X*
   1. In your `onCreate` method ,use StatusBarColorUtils.changeStatusBarColor()
         before `setContentView()`
         
