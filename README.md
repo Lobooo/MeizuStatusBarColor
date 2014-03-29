@@ -14,10 +14,8 @@ Usage
   3. when android:windowIsTranslucent is true, which would lead to conflicts
 
   4. throw overridePendingTransition(),the actionbar can not be splited.
-		yes:
-        overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out)
-        no:
-        overridePendingTransition(0,R.anim.slide_left_out)
+		OK: overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out)
+		NG: overridePendingTransition(0,R.anim.slide_left_out)
 
 
 Developed By
