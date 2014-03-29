@@ -1,4 +1,6 @@
-package com.example.statusbarcolorswitch;
+package com.example.meizustatusbarcolor;
+
+import com.example.statusbarcolorswitch.R;
 
 import android.app.Activity;
 import android.graphics.Color;

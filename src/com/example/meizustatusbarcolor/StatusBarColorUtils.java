@@ -1,4 +1,4 @@
-package com.example.statusbarcolorswitch;
+package com.example.meizustatusbarcolor;
 
 import java.lang.reflect.Field;
 
