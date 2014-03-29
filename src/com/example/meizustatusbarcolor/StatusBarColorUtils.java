@@ -12,7 +12,26 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class StatusBarColorUtils {
-
+	/**
+	 * Change the StatusBar color to the same color of the ActionBar，just like ios7
+	 * 
+	 * <pre>
+	 * Need permission of android.permission.SYSTEM_ALERT_WINDOW
+	 * You must make overridePendingTransition so that the animation between activity switching be normal
+	 *    OK:overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out) 
+	 *    NG: overridePendingTransition(0,R.anim.slide_left_out)
+	 * Conflict with the swipebacklib by @碎星iKe because of windowIsTranslucent is true   
+	 * </pre>
+	 * 
+	 * @author original：lob0 (http://weibo.com/lob0)
+	 * @author modify：朱雪松dream (http://weibo.com/u/2052202067)
+	 * 
+	 * @param context
+	 * @param window
+	 * @param view
+	 * @param windowMager
+	 * @param color:the same with actionBarStyle color in 'style.xml'
+	 */
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 	public static void changeStatusBarColor(Context context, Window window,
 			View statusBarView, WindowManager wm, int color) {
@@ -24,7 +43,7 @@ public class StatusBarColorUtils {
 		try {
 			Field meizuFlagsField = mzLpClass.getField("meizuFlags");
 			int meizuFlags = (Integer) meizuFlagsField.get(params);
-			meizuFlags |= 0x40; // this makes statusbar transparent
+			meizuFlags |= 0x40; // this makes the statusbar transparent
 			meizuFlagsField.set(params, meizuFlags);
 		} catch (NoSuchFieldException e) {
 		} catch (IllegalAccessException e) {
